@@ -286,7 +286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   rain: {fileID: 2183696134482915855, guid: 9b923cccd4e80544087ecc1afc5597a8, type: 3}
-  rain_count: 100
+  rain_count: 300
 --- !u!4 &791666931
 Transform:
   m_ObjectHideFlags: 0

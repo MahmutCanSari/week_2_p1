@@ -14,7 +14,7 @@ public class rain_script : MonoBehaviour
     void Update()
     {
        move();
-        if (rain_pos.y < -5f) 
+        if (rain_pos.y < -6f) 
         {
            born();
         }
@@ -23,7 +23,6 @@ public class rain_script : MonoBehaviour
 
     void born() 
     {
-        GetComponent<Renderer>().enabled = false;
         y_scale = Random.Range(0f, 1f);
         internal_flow_speed = Random.Range(0.8f, 1f);
         GetComponent<Renderer>().material.color = new Color(0.8f/y_scale, 0.2f/y_scale, 0.8f/y_scale, 1f*y_scale);
@@ -31,8 +30,7 @@ public class rain_script : MonoBehaviour
         rain_pos.x = Random.Range(-9.2f,9.2f);
         rain_pos.y = Random.Range(5f,15f);
         rain_pos.z = (y_scale-0.5f)*-7f;
-        transform.position = new Vector3(0f, 0f, rain_pos.z);
-        GetComponent<Renderer>().enabled = true;
+        transform.position = rain_pos;
 
     }
 
